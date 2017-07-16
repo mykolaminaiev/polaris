@@ -1,0 +1,9 @@
+rootProject.name = 'polaris-parent'
+include 'polaris-aws-integration'
+include 'polaris-common-services'
+include 'polaris-config'
+include 'polaris-management'
+include 'polaris-persistence'
+include 'polaris-security-analyzer'
+include 'polaris-web-app'
+

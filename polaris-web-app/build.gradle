@@ -1,0 +1,54 @@
+group 'polaris-parent'
+version 'FIXED'
+
+apply plugin: 'java'
+apply plugin: 'war'
+apply plugin: 'com.bmuschko.tomcat'
+apply plugin: 'com.bmuschko.tomcat-base'
+sourceCompatibility = 1.8
+
+buildscript {
+
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'com.bmuschko:gradle-tomcat-plugin:2.2.5'
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    def tomcatVersion = '7.0.59'
+
+    tomcat "org.apache.tomcat.embed:tomcat-embed-core:${tomcatVersion}",
+            "org.apache.tomcat.embed:tomcat-embed-logging-juli:${tomcatVersion}",
+            "org.apache.tomcat.embed:tomcat-embed-jasper:${tomcatVersion}"
+}
+
+tomcat {
+    httpPort = 8080
+    stopPort = 8181
+    stopKey = 'stopKey'
+    contextPath = 'polaris'
+    enableSSL = true
+    users {
+        user {
+            username = 'admin' as Collection<String>
+            password = 'admin' as Collection<String>
+            roles = ['manager-gui', 'manager-script'] as Collection<List<String>>
+        }
+    }
+}
+
+dependencies {
+    compile project(':polaris-security-analyzer')
+    compile project(':polaris-common-services')
+    compile project(':polaris-aws-integration')
+    compile project(':polaris-management')
+    compile group: 'javax.servlet', name: 'javax.servlet-api', version: depVersions.sevletApi
+}

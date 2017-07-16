@@ -1,0 +1,29 @@
+group 'polaris-parent'
+version 'FIXED'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'org.springframework', name: 'spring-webmvc', version: depVersions.springWebmvc
+    compile group: 'org.springframework.security', name: 'spring-security-core', version: depVersions.spring
+    compile group: 'org.springframework.security', name: 'spring-security-config', version: depVersions.spring
+    compile group: 'org.springframework.security', name: 'spring-security-web', version: depVersions.spring
+    //compile group: 'org.springframework.data', name: 'spring-data-jpa', version: depVersions.springDataJpa
+    compile group: 'org.springframework.data', name: 'spring-data-mongodb', version: depVersions.springDataMongo
+    //compile group: 'org.hibernate.javax.persistence', name: 'hibernate-jpa-2.1-api', version: depVersions.hibernateJpa
+    compile group: 'commons-dbcp', name: 'commons-dbcp', version: depVersions.commonsDbcp
+    compile group: 'org.hsqldb', name: 'hsqldb', version: depVersions.hsqldb
+    compile group: 'org.mongodb', name: 'mongo-java-driver', version: depVersions.mongo
+    compile group: 'org.apache.commons', name: 'commons-io', version: depVersions.commonsIo
+    compile group: 'com.google.guava', name: 'guava', version: depVersions.guava
+    compile group: 'joda-time', name: 'joda-time', version: depVersions.jodaTime
+    compile group: 'net.sf.dozer', name: 'dozer', version: depVersions.dozer
+    compile group: 'com.google.code.gson', name: 'gson', version: depVersions.gson
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: depVersions.commonsLang
+}

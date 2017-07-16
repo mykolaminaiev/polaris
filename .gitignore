@@ -1,0 +1,10 @@
+*.iml
+target/
+*.idea
+build/
+.gradle
+node_modules
+bower_modules
+bower_components
+gradle/
+init_with_aws_account.sql

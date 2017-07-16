@@ -1,0 +1,85 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" ng-app="polarisApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Polaris</title>
+
+    <base href="/polaris/">
+
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,100,700|Roboto:400,100,300,500,700,900&subset=latin,latin-ext'
+          rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="resources/css/pichichi.css">
+    <link rel="stylesheet" href="resources/bower_components/angular-datatables/dist/css/angular-datatables.css">
+    <link rel="stylesheet" href="resources/bower_components/datatables/media/css/jquery.dataTables.css">
+    <link rel="stylesheet" href="resources/bower_components/datatables-responsive/css/responsive.dataTables.css">
+    <link rel="stylesheet" href="resources/bower_components/datatables.net-buttons-dt/css/buttons.dataTables.css">
+</head>
+
+<body>
+
+<div class="cbp-af-header">
+    <div ui-view="polarisHeader" class="cbp-af-inner"></div>
+</div>
+
+<loading></loading>
+
+<div id="content" ng-hide="loading">
+    <div ui-view="polarisContent"></div>
+</div>
+
+<footer>
+    FOOTER
+
+    <div id="footersocial">
+        <ul style="list-style:none; padding: 0px; margin: 0px; font-size: 29px;">
+            <li class="zocial-twitter"></li>
+            <li class="zocial-facebook"></li>
+            <li class="zocial-github"></li>
+            <li class="zocial-instagram"></li>
+            <li class="zocial-dribbble"></li>
+            <li class="zocial-evernote"></li>
+            <li class="zocial-linkedin"></li>
+            <li class="zocial-pinterest"></li>
+            <li class="zocial-google"></li>
+            <li class="zocial-youtube"></li>
+            <li class="zocial-flickr"></li>
+            <li class="zocial-lastfm"></li>
+            <li class="zocial-reddit"></li>
+        </ul>
+    </div>
+
+</footer>
+
+<script src="resources/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="resources/bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
+<script src="resources/bower_components/datatables-light-columnfilter/dist/dataTables.lightColumnFilter.min.js"></script>
+<script src="resources/bower_components/datatables-responsive/js/dataTables.responsive.js"></script>
+<script src="resources/bower_components/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+<script src="resources/bower_components/datatables.net-buttons/js/buttons.colVis.min.js"></script>
+<script src="resources/bower_components/datatables.net-buttons/js/buttons.print.min.js"></script>
+<script src="resources/bower_components/datatables.net-buttons/js/buttons.flash.min.js"></script>
+<script src="resources/bower_components/datatables.net-buttons/js/buttons.html5.min.js"></script>
+<!-- Angular Core -->
+<script src="resources/js/library/angular.min.js"></script>
+<script src="resources/js/library/angular-ui-router.js"></script>
+<script src="resources/bower_components/angular-datatables/dist/angular-datatables.min.js"></script>
+<script src="resources/bower_components/angular-datatables/dist/plugins/light-columnfilter/angular-datatables.light-columnfilter.min.js"></script>
+<script src="resources/bower_components/angular-datatables/dist/plugins/buttons/angular-datatables.buttons.min.js"></script>
+<!-- Angular App -->
+<script src="resources/js/app/polarisApp.js"></script>
+<script src="resources/js/app/home/home.js"></script>
+<script src="resources/js/app/home/service/homeService.js"></script>
+<script src="resources/js/app/home/directive/homeDirectives.js"></script>
+<script src="resources/js/app/feedback/feedback.js"></script>
+<script src="resources/js/app/latest_logs/latest_logs.js"></script>
+<script src="resources/js/app/latest_logs/service/logsService.js"></script>
+<script src="resources/js/app/settings/settings.js"></script>
+<script src="resources/js/app/settings/service/settingsService.js"></script>
+<script src="resources/js/app/organizations/organizations.js"></script>
+<script src="resources/js/app/organizations/service/organizationsService.js"></script>
+
+<!-- Template js -->
+<!--<script src="resources/js/library/classie.js"></script>
+<script src="resources/js/library/cbpAnimatedHeader.js"></script>-->
+</body>
+</html>

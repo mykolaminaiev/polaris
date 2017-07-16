@@ -1,0 +1,12 @@
+databaseChangeLog:
+  - changeSet:
+      id: renameColumn
+      author: Mykola_Minaiev
+      changes:
+      - renameColumn:
+          catalogName: polaris
+          columnDataType: BIGINT
+          newColumnName: id
+          oldColumnName: organization_id
+          schemaName: public
+          tableName: organizations

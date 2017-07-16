@@ -1,0 +1,15 @@
+group 'polaris-parent'
+version 'FIXED'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile project(':polaris-config')
+    compile project(':polaris-aws-integration')
+}

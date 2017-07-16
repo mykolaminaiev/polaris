@@ -1,0 +1,16 @@
+databaseChangeLog:
+  - changeSet:
+      id: createOrganizationTable
+      author: Mykola_Minaiev
+      changes:
+      - createTable:
+          catalogName: polaris
+          columns:
+          - column:
+              name: organization
+              type: varchar(255)
+          - column:
+              name: id
+              type: BIGINT
+          schemaName: public
+          tableName: organizations

@@ -1,0 +1,21 @@
+group 'polaris-parent'
+version 'FIXED'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile project(':polaris-config')
+    compile project(':polaris-persistence')
+    compile group: 'javax.servlet', name: 'javax.servlet-api', version: depVersions.sevletApi
+    compile group: 'org.slf4j', name: 'slf4j-api', version: depVersions.slf4jApi
+    compile group: 'org.slf4j', name: 'slf4j-simple', version: depVersions.slf4jSimple
+    compile group: 'de.flapdoodle.embed', name: 'de.flapdoodle.embed.mongo', version: depVersions.flapdoodleMongo
+    compile group: 'junit', name: 'junit', version: depVersions.junit
+    compile group: 'org.springframework', name: 'spring-test', version: depVersions.springTest
+}

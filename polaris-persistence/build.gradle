@@ -1,0 +1,18 @@
+group 'polarisGradle'
+version 'FIXED'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile project(':polaris-config')
+    compile group: 'org.hibernate', name: 'hibernate-core', version: depVersions.hibernateCore
+    compile group: 'org.hibernate', name: 'hibernate-entitymanager', version: depVersions.hibernateEntitymanager
+    compile group: 'org.hibernate', name: 'hibernate-validator', version: depVersions.hibernateValidator
+    compile group: 'org.jadira.usertype', name: 'usertype.core', version: depVersions.usertypeCore
+}

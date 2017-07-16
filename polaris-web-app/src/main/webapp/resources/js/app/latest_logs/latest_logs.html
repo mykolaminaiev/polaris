@@ -1,0 +1,25 @@
+<div>
+
+    <table datatable="ng" dt-options="dtOptions" class="row-border hover">
+        <thead>
+        <tr>
+            <th>Event name</th>
+            <th>Event time</th>
+            <th>Event type</th>
+            <th>Event source</th>
+            <th>Source IP Address</th>
+            <th>User agent</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="log in ::logs">
+            <td>{{log.data.eventName}}</td>
+            <td>{{log.data.eventTime.millis | date:'medium'}}</td>
+            <td>{{log.data.eventType}}</td>
+            <td>{{log.data.eventSource}}</td>
+            <td>{{log.data.sourceIPAddress}}</td>
+            <td>{{log.data.userAgent}}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>

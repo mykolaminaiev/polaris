@@ -1,0 +1,17 @@
+group 'polaris-parent'
+version 'FIXED'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile project(':polaris-persistence')
+    compile project(':polaris-common-services')
+    compile project(':polaris-config')
+    compile group: 'com.amazonaws', name: 'aws-java-sdk', version: depVersions.awsJavaSdk
+}
